@@ -1,0 +1,54 @@
+/************************************
+* Grid Width
+************************************/
+
+// start:w-full lg:w-1/2 column
+// start:w-full lg:w-6/12 column
+// start:w-full lg:w-5/12 lg:ml-2/12 column
+
+$max-grid-width: theme('screens.2xl');
+$gutter: 32px;
+
+@mixin grid-width {
+  max-width: $max-grid-width;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  @include grid-width;
+
+  &.align-center {
+    justify-content: center;
+  }
+
+  >.column {
+    padding: 0 calc($gutter / 2);
+
+    @screen md {
+      padding: 0 calc(($gutter * 2) / 2);
+    }
+  }
+}
+
+
+.row-full-bleed {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  &.align-center {
+    justify-content: center;
+  }
+
+  >.column {
+    padding: 0 calc($gutter / 2);
+
+    @screen md {
+      padding: 0 calc(($gutter * 2) / 2);
+    }
+  }
+}

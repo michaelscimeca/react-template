@@ -1,0 +1,32 @@
+/************************************
+* Default Transition
+************************************/
+// $bez-default: cubic-bezier(0.6, 0, 0.4, 1);
+$bez-default: cubic-bezier(.19, 1, .22, 1);
+$default-transition: 1800ms;
+
+/************************************
+* Text-image-card
+************************************/
+$text-image-card-transition: cubic-bezier(0.23, 1, 0.32, 1);
+$text-image-card-transition-speed: 1200ms;
+
+
+/************************************
+* Achor Tag Transition
+************************************/
+// $bez-default: cubic-bezier(0.6, 0, 0.4, 1);
+$bez-achor: cubic-bezier(.19, 1, .22, 1);
+$default-transition: 1800ms;
+
+/************************************
+* btn Transition
+************************************/
+$btn-transition: cubic-bezier(0.23, 1, 0.32, 1);
+$btn-transition-speed: 1800ms;
+
+/************************************
+* Module Transition
+************************************/
+$module-transition: cubic-bezier(0.23, 1, 0.32, 1);
+$module-transition-speed: 800ms;

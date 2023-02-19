@@ -1,0 +1,9 @@
+@import "./global/settings/util/tailwind";
+@import "./global/settings/util/laconic";
+@import "./global/settings/transition/transition-variables";
+@import "./global/settings/fonts";
+@import "./global/settings/global";
+@import "./global/settings/framework/grid-framework";
+@import "./global/settings/framework/section";
+
+@import "./pages/home";

@@ -1,0 +1,139 @@
+section {
+  position: relative;
+  // &:nth-child(even) {
+  //   @apply bg-gray-200;
+  // }
+  // &:nth-child(odd) {
+  //   @apply bg-gray-100;
+  // }
+  &.p-standard {
+    @apply pt-4 pb-4;
+  }
+  &.p-small {
+    @apply pt-2 pb-2;
+  }
+  &.p-medium {
+    @apply pt-6 pb-6;
+  }
+  &.p-large {
+    @apply pt-10 pb-10;
+  }
+  &.p-xlarge {
+    @apply pt-12 pb-12;
+  }
+  &.m-standard {
+    @apply mt-4 mb-4;
+  }
+  &.m-small {
+    @apply mt-2 mb-2;
+  }
+  &.m-medium {
+    @apply mt-6 mb-6;
+  }
+  &.m-large {
+    @apply mt-10 mb-10;
+  }
+  &.m-xlarge {
+    @apply mt-12 mb-12;
+  }
+
+  &.spt-0 {
+    @apply pt-0;
+  }
+  &.spt-1 {
+    @apply pt-1;
+  }
+  &.spt-2 {
+    @apply pt-2;
+  }
+  &.spt-3 {
+    @apply pt-3;
+  }
+  &.spt-4 {
+    @apply pt-4;
+  }
+  &.spt-5 {
+    @apply pt-5;
+  }
+  &.spt-6 {
+    @apply pt-6;
+  }
+  &.spt-7 {
+    @apply pt-7;
+  }
+
+  &.spb-0 {
+    @apply pb-0;
+  }
+  &.spb-1 {
+    @apply pb-1;
+  }
+  &.spb-2 {
+    @apply pb-2;
+  }
+  &.spb-3 {
+    @apply pb-3;
+  }
+  &.spb-4 {
+    @apply pb-4;
+  }
+  &.spb-5 {
+    @apply pb-5;
+  }
+  &.spb-6 {
+    @apply pb-6;
+  }
+  &.spb-7 {
+    @apply pb-7;
+  }
+
+  &.smb-0 {
+    @apply mb-0;
+  }
+  &.smb-1 {
+    @apply mb-1;
+  }
+  &.smb-2 {
+    @apply mb-2;
+  }
+  &.smb-3 {
+    @apply mb-3;
+  }
+  &.smb-4 {
+    @apply mb-4;
+  }
+  &.smb-5 {
+    @apply mb-4;
+  }
+  &.smb-6 {
+    @apply mb-6;
+  }
+  &.smb-7 {
+    @apply mb-7;
+  }
+
+  &.smt-0 {
+    @apply mt-0;
+  }
+  &.smt-1 {
+    @apply mt-1;
+  }
+  &.smt-2 {
+    @apply mt-2;
+  }
+  &.smt-3 {
+    @apply mt-3;
+  }
+  &.smt-4 {
+    @apply mt-4;
+  }
+  &.smt-5 {
+    @apply mt-5;
+  }
+  &.smt-6 {
+    @apply mt-6;
+  }
+  &.smt-7 {
+    @apply mt-7;
+  }
+}

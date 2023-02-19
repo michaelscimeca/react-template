@@ -1,0 +1,107 @@
+@mixin defualt-btn {
+  @apply h-6 pr-5 pl-5;
+ }
+
+ @mixin xlarge-btn {
+   @apply h-8 pr-7 pl-7;
+ }
+
+ @mixin large-btn {
+   @apply h-7 pr-6 pl-6;
+ }
+
+ @mixin medium-btn {
+   @apply h-6 pr-5 pl-5;
+ }
+
+ @mixin small-btn {
+   @apply h-5 pr-4 pl-4;
+ }
+
+ @mixin cta-btn {
+   @apply h-8 pr-9 pl-9;
+ }
+
+ @mixin search-btn {
+  @apply h-10 pr-9 pl-9;
+}
+
+.btn-across {
+  // grid-gap: 8px;
+  // display: grid;
+  // grid-template-columns: min-content;
+  // justify-content: flex-start;
+  // grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+}
+
+.btn-animation {
+  @apply inline-block;
+}
+
+@mixin btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: underline;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: em(16);
+  text-decoration: none;
+  @apply bg-primary text-white;
+
+  span,
+  .btn-text {
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  // Bg Color
+  &.primary {
+    @apply bg-primary hover:bg-second-primary;
+  }
+  &.second-primary {
+    @apply bg-second-primary hover:bg-secondary;
+  }
+  &.secondary {
+    @apply bg-secondary hover:bg-second-third;
+  }
+  &.second-secondary {
+    @apply bg-second-secondary hover:bg-primary;
+  }
+
+  // Btn Size
+  &.default  {
+    @include defualt-btn;
+  }
+
+  &.xlarge {
+    @include xlarge-btn;
+  }
+
+  &.large {
+    @include large-btn;
+  }
+
+  &.medium {
+    @include medium-btn;
+  }
+
+  &.small {
+    @include small-btn;
+  }
+
+  &.cta {
+    @include cta-btn;
+  }
+
+  &.search-btn {
+    @include search-btn;
+  }
+ }
+
+.btn,
+.btn a {
+  @include btn;
+}

@@ -1,0 +1,200 @@
+/************************************
+* Font size Scale
+************************************/
+$fontScaleStop: 1025;
+$fontScaleBreak: 1700;
+
+@mixin Headline {
+  @apply font-headline font-normal tracking-normal font-bold;
+}
+
+@mixin Body-Copy {
+  @apply font-paragraph font-normal tracking-normal;
+}
+
+$h1: (
+"smallest-font": rem(40),
+"largest-font": rem(58),
+"smallest-line-height": rem(40),
+"largest-line-height": rem(66)
+);
+
+$h2: (
+"smallest-font": rem(36),
+"largest-font": rem(50),
+"smallest-line-height": rem(44),
+"largest-line-height": rem(58)
+);
+
+$h3: (
+"smallest-font": rem(28),
+"largest-font": rem(48),
+"smallest-line-height": rem(36),
+"largest-line-height": rem(56)
+);
+
+
+$h4: (
+"smallest-font": rem(22),
+"largest-font": rem(36),
+"smallest-line-height": rem(28),
+"largest-line-height": rem(44)
+);
+
+$h5: (
+"smallest-font": rem(18),
+"largest-font": rem(24),
+"smallest-line-height": rem(24),
+"largest-line-height": rem(32)
+);
+
+$h6: (
+"smallest-font": rem(16),
+"largest-font": rem(18),
+"smallest-line-height": rem(21),
+"largest-line-height": rem(24)
+);
+
+@mixin h1 {
+  @include Headline;
+  font-size: r-clamp(map-get($h1, smallest-font), map-get($h1, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h1, smallest-line-height), map-get($h1, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin h2 {
+  @include Headline;
+  font-size: r-clamp(map-get($h2, smallest-font), map-get($h2, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h2, smallest-line-height), map-get($h2, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin h3 {
+  @include Headline;
+  font-size: r-clamp(map-get($h3, smallest-font), map-get($h3, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h3, smallest-line-height), map-get($h3, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin h4 {
+  @include Headline;
+  font-size: r-clamp(map-get($h4, smallest-font), map-get($h4, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h4, smallest-line-height), map-get($h4, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin h5 {
+  @include Headline;
+  font-size: r-clamp(map-get($h5, smallest-font), map-get($h5, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h5, smallest-line-height), map-get($h5, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin h6 {
+  @include Headline;
+  font-size: r-clamp(map-get($h6, smallest-font), map-get($h6, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($h6, smallest-line-height), map-get($h6, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+$p: (
+"smallest-font": rem(16),
+"largest-font": rem(18),
+"smallest-line-height": rem(21),
+"largest-line-height": rem(28)
+);
+
+$p-xlarge: (
+"smallest-font": rem(32),
+"largest-font": rem(36),
+"smallest-line-height": rem(31),
+"largest-line-height": rem(34)
+);
+
+$p-large: (
+"smallest-font": rem(24),
+"largest-font": rem(28),
+"smallest-line-height": rem(31),
+"largest-line-height": rem(34)
+);
+
+$p-xmedium: (
+"smallest-font": rem(22),
+"largest-font": rem(26),
+"smallest-line-height": rem(31),
+"largest-line-height": rem(34)
+);
+
+$p-medium: (
+"smallest-font": rem(20),
+"largest-font": rem(24),
+"smallest-line-height": rem(31),
+"largest-line-height": rem(34)
+);
+
+$p-xsmall: (
+"smallest-font": rem(16),
+"largest-font": rem(20),
+"smallest-line-height": rem(31),
+"largest-line-height": rem(34)
+);
+
+$p-small: (
+"smallest-font": rem(10),
+"largest-font": rem(12),
+"smallest-line-height": rem(21),
+"largest-line-height": rem(24)
+);
+
+@mixin p {
+  font-size: r-clamp(map-get($p, smallest-font), map-get($p, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p, smallest-line-height), map-get($p, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-xlarge {
+  font-size: r-clamp(map-get($p-xlarge, smallest-font), map-get($p-xlarge, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-xlarge, smallest-line-height), map-get($p-xlarge, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-large {
+  font-size: r-clamp(map-get($p-large, smallest-font), map-get($p-large, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-large, smallest-line-height), map-get($p-large, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-xmedium {
+  font-size: r-clamp(map-get($p-xmedium, smallest-font), map-get($p-xmedium, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-xmedium, smallest-line-height), map-get($p-xmedium, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-medium {
+  font-size: r-clamp(map-get($p-medium, smallest-font), map-get($p-medium, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-medium, smallest-line-height), map-get($p-medium, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-xsmall {
+  font-size: r-clamp(map-get($p-xsmall, smallest-font), map-get($p-xsmall, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-xsmall, smallest-line-height), map-get($p-xsmall, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+@mixin p-small {
+  font-size: r-clamp(map-get($p-small, smallest-font), map-get($p-small, largest-font), rem($fontScaleStop), rem($fontScaleBreak));
+  line-height: r-clamp(map-get($p-small, smallest-line-height), map-get($p-small, largest-line-height),rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+:not(section).p-xlarge {
+  @include p-xlarge;
+}
+
+:not(section).p-large {
+  @include p-large;
+}
+
+:not(section).p-xmedium {
+  @include p-xmedium;
+}
+
+:not(section).p-medium {
+  @include p-medium;
+}
+
+:not(section).p-xsmall {
+  @include p-xsmall;
+}
+
+:not(section).p-small {
+  @include p-small;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import BlockContent from "@sanity/block-content-to-react";
-import Layout from "../../components/Layout";
-import imageUrlFor from "../../../utils/imageUrlFor";
+import Layout from "../../components/main/Layout";
 import { client } from "../../../lib/sanity";
 import Image from 'next/image'
+import { urlFor } from '../../utils/imageUrlFor'
 
 const moviesQuery = `*[_type == "movie"] { _id }`;
 
@@ -89,42 +89,21 @@ const serializers = {
 };
 
 const Movie = ({ movie }) => {
-  const {
-    poster: { crop = { left: 0, top: 0 }, hotspot = { x: 0.5, y: 0.5 } }
-  } = movie;
+
+  console.log(movie)
   return (
     <Layout>
       <div className="movie">
-        <div
-          className="header"
-          style={{
-            backgroundImage: `url(${imageUrlFor(movie.poster)})`,
-            backgroundPosition: `${(hotspot.x - crop.left) *
-              100}% ${(hotspot.y - crop.top) * 100}%`
-          }}
-        >
-          <div className="header-content">
-            <h1>{movie.title}</h1>
-          </div>
-        </div>
-
         <div className="content">
           <div className="sidebar">
-            <img
-              className="poster"
-              src={imageUrlFor(movie.poster)
-                .ignoreImageParams()
-                .width(500)}
-              alt={`Movie poster for ${movie.title}`}
-            />
+          <img src={urlFor(movie.poster).width(500).height(300).url()} />
+          {/* <Image src={urlFor(movie.poster).url()} /> */}
           </div>
           <div className="main-content">
             <div className="overview">
               <BlockContent
                 blocks={movie.overview}
                 serializers={serializers}
-                dataset={client.clientConfig.dataset}
-                projectId={client.clientConfig.projectId}
               />
             </div>
             <h2>Cast</h2>
@@ -134,9 +113,7 @@ const Movie = ({ movie }) => {
                   <Link href="/person/[id]" as={`/person/${cast.person._id}`} legacyBehavior>
                     <a className="cast-list-link">
                       <span>
-                        {cast.person.image && (
-                          <img src={imageUrlFor(cast.person.image).width(64)} />
-                        )}
+                   
                       </span>
                       <span>
                         <span className="cast-person-name">
@@ -182,8 +159,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params}) => {
   const movie = await client.fetch(singleMovieQuery, { id: params.id })
-  console.log(movie)
-
   return { props: { movie } };
 }
 

@@ -1,0 +1,257 @@
+/************************************
+* IMG Path
+************************************/
+$theme-path: '~/library/assets/';
+
+/************************************
+* Gobal Setup
+************************************/
+
+html {
+  background-color: white;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+
+html,
+body {
+  position: relative;
+  @include Body-Copy;
+  // width: 100%;
+  // height: 100%;
+  // color: theme('colors.second-secondary');
+  @apply bg-second-primary;
+
+  &.overflow-hidden-module {
+    overflow: hidden;
+  }
+}
+
+main#app {
+  position: relative;
+  width: 100%;
+  // min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mt-0 text-white;
+
+  span {
+
+    // style in the acf_wysiwyg
+    &.highlight {
+      @apply text-gray-500;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a {
+  @screen tablet-down {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+h1 {
+  @include h1;
+  margin-bottom: r-clamp(rem(34), rem(44), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+h2 {
+  @include h2;
+  margin-bottom: r-clamp(rem(24), rem(34), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+h3 {
+  @include h3;
+  margin-bottom: r-clamp(rem(14), rem(24), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+h4 {
+  @include h4;
+  margin-bottom: r-clamp(rem(14), rem(24), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+h5 {
+  @include h5;
+  margin-bottom: r-clamp(rem(14), rem(24), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+h6 {
+  @include h6;
+  margin-bottom: r-clamp(rem(14), rem(24), rem($fontScaleStop), rem($fontScaleBreak));
+}
+
+p {
+  @include p;
+  @apply text-second-third mb-2;
+
+  span {
+
+    // style in the acf_wysiwyg
+    &.highlight {
+      @apply text-gray-500;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  @include p;
+  @apply text-primary;
+  transition: color;
+  transition-duration: $default-transition;
+  transition-timing-function: $bez-achor;
+
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    @apply outline-none;
+  }
+
+  @include hover {
+    @apply text-primary;
+  }
+}
+
+ul,
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  @apply m-0 p-0;
+
+  li {
+    list-style: none;
+    @include p;
+  }
+}
+
+ol {
+  @apply mb-2;
+  margin: revert;
+  list-style: none;
+
+  li {
+    @apply mb-1;
+    counter-increment: item;
+
+    &:before {
+      content: counter(#{item}) ".";
+      margin-right: 10px;
+      text-align: center;
+      color: theme('colors.primary');
+    }
+  }
+}
+
+
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}

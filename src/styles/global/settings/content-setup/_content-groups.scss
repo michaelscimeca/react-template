@@ -1,0 +1,80 @@
+.standard-content {
+
+  .above-headline {
+    color: theme('colors.primary');
+    font-size: r-clamp(rem(10), rem(12),rem($fontScaleStop), rem($fontScaleBreak));
+    line-height: r-clamp(rem(14), rem(16),rem($fontScaleStop), rem($fontScaleBreak));
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: r-clamp(rem(8), rem(25),rem($fontScaleStop), rem($fontScaleBreak));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 mb-4;
+  }
+
+  img {
+    @apply mb-2;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  .btn {
+    // @apply w-full;
+  }
+}
+
+.standard-card-content {
+  @apply pt-2;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: r-clamp(rem(12), rem(16),rem($fontScaleStop), rem($fontScaleBreak));
+  }
+
+  img {
+    @apply mb-2;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  .btn {
+    white-space: nowrap;
+  }
+}
+
+/// Content Class Controls
+.txt-logic {
+
+  &.no-paragraph.no-button {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mb-0;
+    }
+  }
+
+  &.no-button {
+    p {
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+}

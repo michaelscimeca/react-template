@@ -1,1 +1,25 @@
-.home-page {}
+.home-page {
+    @apply bg-primary;
+}
+
+/* Define styles for the entering state */
+.fade-enter {
+    opacity: 0;
+}
+
+/* Define styles for the entering active state */
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+/* Define styles for the exiting state */
+.fade-exit {
+    opacity: 1;
+}
+
+/* Define styles for the exiting active state */
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}

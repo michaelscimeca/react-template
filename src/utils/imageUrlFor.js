@@ -1,7 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url'
 
 const builder = imageUrlBuilder({
-  projectId: "vj4khdtr",
+  projectId: process.env.PROJECTID,
   dataset: "production"
 })
 

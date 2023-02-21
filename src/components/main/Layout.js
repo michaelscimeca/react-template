@@ -8,11 +8,11 @@ export default function Layout(props) {
   return (
     <>
      <Header/>
-      <main className={`${pageName}-page`}>
-        <Nav/>
-        {props.children}
-       </main>
-      <Footer/>
+    <main className={`${pageName}-page`}>
+      <Nav/>
+      {props.children}
+    </main>
+    <Footer/>
     </>
   );
 }

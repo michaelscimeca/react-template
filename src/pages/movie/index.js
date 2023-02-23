@@ -10,6 +10,8 @@ const query = groq`*[_type == "movie" && defined(slug.current)]{
 
 export const getStaticProps = async () => {
   const data = await client.fetch(query);
+  // console.log(data)
+
   return { props: { data } };
 };
 
